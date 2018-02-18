@@ -12,9 +12,18 @@ a{
   color: #fff;
 }
 
-a:hover{
+a:hover, a:active, a:visited, a:focus{
   color: #fff;
-  text-decoration: none;
+  text-decoration: none !important;
+}
+
+svg{
+  position: relative;
+  top: 6px;
+  left: -12px;
+  height: 15px;
+  width: 15px;
+  float: left;
 }
 
 .menu-active{
@@ -65,6 +74,7 @@ hr{
 
 .block{
   margin: 20px 0;
+  color: #fff;
 }
 
 header{
@@ -149,4 +159,94 @@ header{
     bottom: 0;
     transform: rotate(-90deg);
     transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+/*//SLIDESHOW REEL//*/
+.photo-reel{
+  background-color: #000;
+}
 
+.highlight{
+  margin: 0 auto;
+}
+.highlight-container{
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.slides{
+  max-width: 800px;
+  display: none;
+  margin: 0 auto;
+}
+
+.slides img{
+  margin-top: 20px;
+  max-width: 800px;
+  height: 500px;
+  width: 800px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  max-width: 800px;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
