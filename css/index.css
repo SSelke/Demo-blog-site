@@ -9,7 +9,7 @@ html,body{
   padding: 0;
   margin: 0;
   height: 100%;
-  background-color: #364F6B;
+  background-color: #F5F5F5;
   box-sizing: border-box;
 }
 
@@ -69,6 +69,13 @@ hr{
   margin-right: 40px;
 }
 
+section hr{
+  margin-right: 0px;
+  border: 0.9px solid rgba(0, 0, 0, 0.5) !important;
+  width: 100%;
+  height: 0px;
+}
+
 .blogs-ul{
   list-style: none;
   margin-top: 10px;
@@ -86,8 +93,16 @@ hr{
 
 header{
   height: 80px;
-  background-color: #F5F5F5;
+  background-color: #364F6B ;
 }
+
+.svg{
+  display: block;
+  height: 85px;
+  width: 200px;
+  margin: auto;
+}
+
 
 .hidden{
   position: absolute;
@@ -254,6 +269,37 @@ header{
   from {opacity: .4} 
   to {opacity: 1}
 }
+/*//BLOG POST SECTION//*/
+.articles .container{
+  max-width: 80% !important;
+}
+
+.post{
+  height: auto;
+  margin-top: 20px;
+}
+
+.post a{
+  color: #000;
+  cursor: pointer;
+}
+
+.post a:hover{
+  text-decoration: underline !important;
+}
+
+.post h2{
+  font-size: 42px;
+  margin-right: 20px;
+}
+
+.post p{
+  display: block;
+  float: left;
+  padding-top: 10px;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
 
 .profile-pic-section{
   height: 80px;
@@ -261,6 +307,8 @@ header{
   overflow: hidden;
   border-radius: 50%;
   border: 1px solid black;
+  float: right;
+  margin-left: 20px;
 }
 
 .articles{
